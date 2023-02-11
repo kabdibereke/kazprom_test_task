@@ -1,0 +1,30 @@
+import Item from '../Item/Item'
+import styles from './ListItems.module.scss'
+import { useDispatch, useSelector } from 'react-redux'
+
+import { AppDispatch, RootState } from '../../store/store'
+import Button from '../Button/Button'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const ListItems = () => {
+    const {todo} = useSelector((state: RootState) => state.items)
+    const notify = () => toast("В тестовом задании не написано, что должна делать эта кнопка");
+  return (
+    <>
+        <div className={styles.wrapper}>
+        
+        {todo.map((item,id)=> {
+        return <Item  key={item.id} title={item.title} id={item.id}/>
+        })}
+        </div>
+        {!todo.length && <p className={styles.text}> Список пуст </p>}
+        {todo.length && <Button types='test' onClick={notify}>
+          Тест GraphQL
+        </Button>}
+        <ToastContainer autoClose={1000} />
+    </>
+  )
+}
+
+export default ListItems

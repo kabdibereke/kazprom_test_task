@@ -1,0 +1,47 @@
+:global {
+    body[data-theme = 'light' ] {
+        --bg: url('../assets/images/bg-desktop-light.jpg');
+    
+    }
+    body[data-theme = 'dark' ] {
+        --bg: url('../assets/images/bg-desktop-dark.jpg');
+   
+    }
+}
+
+
+header {
+
+    background: var(--bg) no-repeat center center/ cover ;
+    height: 300px;
+    .header_wrapper {
+        height: 60%;
+        margin: 0 auto;
+        max-width: 1280px;
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 40px;
+            letter-spacing: 15px;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.content {
+   
+    margin: 0 auto;
+    max-width: 540px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+  
+}

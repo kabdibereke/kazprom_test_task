@@ -1,0 +1,33 @@
+:global {
+    body[data-theme = 'light' ] {
+        --color: var(--dark-blue);
+        --border-color: var(--border-color-light)
+    }
+    body[data-theme = 'dark' ] {
+        --color: var(--light-gray);
+        --border-color: var(--border-color-dark)
+    }
+}
+
+
+.wrapper {
+    width: 100%;
+    height: fit-content;
+    background-color: transparent;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21px 10px 21px 10px;
+    .text {
+        width: 80%;
+        word-break: break-all;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.05px;
+        
+        color: var(--color)
+    }
+}

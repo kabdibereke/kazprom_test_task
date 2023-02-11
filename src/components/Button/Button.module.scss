@@ -1,0 +1,40 @@
+.button {
+    width: 100px;
+    height: 50px;
+    border: none;
+    
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 10px;
+    font-weight: 700;
+    color:var(--light-gray)
+}
+
+.del {
+    background: #494C6B;
+    background-color: var(--red);
+    &:hover {
+        background-color: var(--red-hover);
+    }
+}
+
+.add {
+    background-color: var(--blue);
+    &:hover {
+        background-color: var(--blue-hover);
+    }
+   
+}
+
+.delItem {
+    width: 80px;
+    height: 40px;
+    background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+}
+
+.test {
+    margin-top: 20px;
+    width: 150px;
+    background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+    margin-bottom: 20px;
+}
