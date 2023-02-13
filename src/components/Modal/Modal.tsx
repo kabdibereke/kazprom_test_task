@@ -17,7 +17,7 @@ const Modal = ({types}: IModal) => {
     const addItemHandler =(e:FormEvent)=> {
         e.preventDefault()
         let id = nanoid()
-        if(inputText.trim().length>3) {
+        if(inputText.trim().length>=3) {
             dispatch(addItem({
                 id:id,
                 title:inputText
